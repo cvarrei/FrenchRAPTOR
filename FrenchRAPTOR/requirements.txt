@@ -1,0 +1,7 @@
+langchain
+matplotlib
+seaborn
+pandas
+numpy
+huggingface_hub
+scikit-learn
