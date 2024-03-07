@@ -48,7 +48,7 @@ Let's start our FrenchRAPTOR algorithm, I started with a range of 3 to 24 cluste
 By examining the above figures, we can observe that the FrenchRAPTOR method required three iterations in order to terminate the iterations after reaching the arbitrary criterion of fewer than five clusters. The stages are 7, 6, (augmented to 12), and 3 clusters, in that order (the number of clusters that maximized the the Silhouette score [black large point]).
 Subsequently, the final three summaries were combined into the comprehensive overview. Thus, we ended up with four levels of abstractive summaries from the overall document, which we used to build a FrenchRAPTOR-enriched corpus using the collapsed tree approach (Sarthi et al., 2024).
 
-<img src="/images/corpus.png" title="hover text">
+<img src="/images/corpus.png" width="500" title="hover text">
 
 Let's get into some of the summaries:
 
