@@ -1,6 +1,6 @@
 # FrenchRAPTOR - Make sure your RAG captures the essence of large documents [Mixtral-8x7B]
 
-Please find the Medium link here: 
+Please find the Medium link here: https://medium.com/@clovis.vrgtR/frenchraptor-make-sure-your-rag-captures-the-essence-of-large-documents-mixtral-8x7b-96af7b347969
 
 
 **MEDIUM ARTICLE:**
@@ -42,11 +42,12 @@ If the user wants to ask the general question: What is the AIAct about? This inf
 It's evident that not all the information is included in the response. It concentrates on high-risk AI systems and only partially reflects the content of the AIAct (the different chunks obtained, k=3). This answer is insufficient to address the user's question.
 
 
-Let's start our FrenchRAPTOR algorithm, I started with a range of 3 to 24 clusters. Before generating the general summary of this final iteration, I applied the arbitrary cutoff of having four clusters or fewer at an iteration.
+Let's start our FrenchRAPTOR algorithm, I started with a range of 3 to 24 clusters. Before generating the general summary of this final iteration, I applied the arbitrary cutoff of having four clusters or fewer at an iteration to end the algorithm.
 
 <img src="/images/silhouette.png" title="hover text">
 
-By examining the above figures, we can observe that the FrenchRAPTOR method required three iterations in order to terminate the iterations after reaching the arbitrary criterion of fewer than five clusters. The stages are 7, 6, (augmented to 12), and 3 clusters, in that order (the number of clusters that maximized the the Silhouette score [black large point]).
+By examining the above figures, we can observe that the FrenchRAPTOR method required three iterations in order to terminate the iterations after reaching the arbitrary criterion of fewer than five clusters. The stages are 7, 6, and 3 clusters, in that order (the number of clusters that maximized the the Silhouette score [black large point]). Numbers of summaries at level 1 were augmented 12 because of the initial outputs (numerical list).
+
 Subsequently, the final three summaries were combined into the comprehensive overview. Thus, we ended up with four levels of abstractive summaries from the overall document, which we used to build a FrenchRAPTOR-enriched corpus using the collapsed tree approach (Sarthi et al., 2024).
 
 <img src="/images/corpus.png" width="500" title="hover text">
@@ -66,7 +67,7 @@ So, let's ask again our question: What is the AIAct about? We get now the follow
 We can see that the response is more complete than the previous one: it addresses more of the themes highlighted in the various articles and accurately states that it is a law for all AI systems, not just high-risk ones. Actually, it is completely inspired by our Document's Overall Concept. 
 
 ## Conclusion 
-Is it equivalent or superior than the original RAPTOR architecture? This is still an open subject; In the futur, I have planned to compare performance and resources (computational and time) to guarantee that a simpler version will work as well. Stay tuned ! 
+Is it equivalent to the original RAPTOR architecture? This is still an open subject; In the futur, I have planned to compare performance and resources (computational and time) to guarantee that a simpler version will work as well. Stay tuned ! 
 However, what I have been able to assess is that it presents effectiveness and realistic processing times. Thus, despite the need for further work to make a robust evaluation performance, FrenchRAPTOR demonstrates that it is an effective solution for hierarchical abstraction of huge texts.
 
 *Disclaimer: This algorithm has been developped and tested with French Documents, thus, the choice of models (generative or embedding models) might need to be changed accoridng to your language.*
